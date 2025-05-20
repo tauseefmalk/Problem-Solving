@@ -18,3 +18,8 @@
 18. How to convert Celsius into Fahrenheit and Fahrenheit into Celsius
 19. How to convert kilometers into miles
 20. Program to make the first letter of a string uppercase
+
+---------------**Two Pointer Method**------------
+
+1. reverse an array.
+2. putting 0 to the left side and 1 at the right side using pointer.
