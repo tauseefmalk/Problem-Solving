@@ -294,3 +294,42 @@
     
 // }
 // console.log(toUpperCase("hey osama, my name is touseef."))
+
+//  **--------Two pointer method----------** 
+
+// 1., reverse an array
+
+// let array = [1,2,3,4,5,6];
+
+// let i=0;
+// let j= array.length-1;
+// while(i<=j){
+//     let temp = array[i];
+//     array[i] = array[j];
+//     array[j] = temp;
+//     i++;
+//     j--;
+// }
+// console.log(array);
+
+// 2. putting 0 to the left side and 1 at the right side using pointer
+
+let array = [0,1,1,0,1,0,0,1,0,1,0,1];
+
+let i = 0;
+let j = 0;
+
+while(i<=array.length-1){
+    if(array[i] === 1){
+        i++;
+    }
+    if(array[i] === 0){
+     let temp = array[i];
+     array[i] = array[j];
+     array[j]= temp;
+     j++;
+     i++;
+    }
+}
+console.log(array);
+
