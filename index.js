@@ -157,7 +157,7 @@
 // };
 // console.log(isPalindrom("touseef"));
 
-// // 12. How to swap two variables
+// 12. How to swap two variables
 
 // let var1 = "one";
 // let var2 = "Two";
@@ -225,22 +225,72 @@
 
 // 17. How to find the union of two arrays
 
-const arr1 = [1,34,5,7,8,10];
-const arr2 = [6,7,8,9,0,12];
+// const arr1 = [1,34,5,7,8,10];
+// const arr2 = [6,7,8,9,0,12];
 
-const union = () => {
-    // let tempArr =[...arr1, ...arr2];
-    // // tempArr ko set me covert kraian to duplicate values hat jayengi 
-    // // let u = new Set([...tempArr])
-    // let u = [...new Set(tempArr)]
+// const union = () => {
+//     // let tempArr =[...arr1, ...arr2];
+//     // // tempArr ko set me covert kraian to duplicate values hat jayengi
+//     // // let u = new Set([...tempArr])
+//     // let u = [...new Set(tempArr)]
 
-    // // if()
-    // return u
+//     // // if()
+//     // return u
 
-    // second method 
-    let tempArr = arr1.concat(arr2);
-    const resp = tempArr.filter((value, index, arr)=>arr.indexOf(value) === index)
-    return resp;
-}
+//     // second method
+//     let tempArr = arr1.concat(arr2);
+//     const resp = tempArr.filter((value, index, arr)=>arr.indexOf(value) === index)
+//     return resp;
+// }
 
-console.log(union())
+// console.log(union())
+
+// 18. How to convert Celsius into Fahrenheit and Fahrenheit into Celsius
+
+// let Celsius=32;
+
+// function convertToFarenheit (c) {
+//     const f= (c*9/5) + 32
+//     return f
+// }
+// console.log(convertToFarenheit(32))
+
+// function convertToCelsius (f) {
+//     const c= (f-32) * 5/9
+//     return c
+// }
+// console.log(convertToCelsius(50))
+
+// 19. How to convert kilometers into miles
+
+// function kmIntoMiles(km) {
+//   const miles = km * 0.62137119;
+//   return miles;
+// }
+
+// console.log(kmIntoMiles(9));
+
+// 20. Program to make the first letter of a string uppercase
+
+// 1.for a single word;
+// let str= "name";
+// function uppercase (str) {
+//     // console.log(str[0]);
+//     const upc = str[0].toUpperCase()
+//     return upc+str.slice(1);
+    
+// }
+// console.log(uppercase("name"));
+
+// 2.for a complete sentence
+// let str = "hey osama, my name is touseef."
+
+// function toUpperCase (str){
+//     // ("") this will create new array from each alphabet of a string but if we put a spcae b/w "" this will create a new array for each word  like we did below
+//     const array = str.split(" ");
+//     console.log(array);
+//     const upc = array.map((word)=>word[0].toUpperCase()+word.slice(1))
+//     return upc.join(" ");
+    
+// }
+// console.log(toUpperCase("hey osama, my name is touseef."))
