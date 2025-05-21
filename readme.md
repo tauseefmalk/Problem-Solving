@@ -23,3 +23,13 @@
 
 1. reverse an array.
 2. putting 0 to the left side and 1 at the right side using pointer.
+
+
+---------------**Patern Programming**------------
+
+1. How to print square in console
+2. How to print Right angle triangle 📐
+3. How to create inverted right triangle
+4. How to create left angle triangle
+5. How to draw cross (X) in console
+6. How to draw V shape in console

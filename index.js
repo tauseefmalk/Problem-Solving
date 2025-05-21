@@ -314,22 +314,117 @@
 
 // 2. putting 0 to the left side and 1 at the right side using pointer
 
-let array = [0,1,1,0,1,0,0,1,0,1,0,1];
+// let array = [0,1,1,0,1,0,0,1,0,1,0,1];
 
-let i = 0;
-let j = 0;
+// let i = 0;
+// let j = 0;
 
-while(i<=array.length-1){
-    if(array[i] === 1){
-        i++;
+// while(i<=array.length-1){
+//     if(array[i] === 1){
+//         i++;
+//     }
+//     if(array[i] === 0){
+//      let temp = array[i];
+//      array[i] = array[j];
+//      array[j]= temp;
+//      j++;
+//      i++;
+//     }
+// }
+// console.log(array);
+
+// **Patern Programming**
+
+// 1. How to print square in console
+// let n=4;
+// for(let i=0; i<n; i++){
+//     for(let j=0; j<n; j++){
+//         //print star in the same line
+//         process.stdout.write("* "); 
+//     }
+//     console.log(" "); 
+// }
+
+// 2. How to print Right angle triangle 📐
+// *
+// **
+// ***
+// ****
+// let n=4
+// for(let i=0; i<n; i++){
+//     for(let j=0; j<=i; j++){
+//         process.stdout.write("* ")
+//     }
+//     console.log(" ");
+// }
+
+// 3. How to create inverted right triangle
+// ****
+// ***
+// **
+// *
+// let n=4;
+// for(let i=0; i<n; i++){
+//     for(let j=0; j<n-i; j++){
+//     // for(let j=n-i; j>0; j--){
+//         process.stdout.write("* ")
+//     }
+//     console.log(" ");
+// }
+
+// 4. How to create left angle triangle
+//    *
+//   **
+//  ***
+// ****
+// let n=4;
+
+// for(let i=0; i<n; i++){
+//     for(let j=0; j<n-i; j++){
+//         process.stdout.write(" ")
+        
+//     }
+//     for(let k=0; k<=i; k++){
+//         process.stdout.write("*")
+//     }
+//     console.log(" ");
+// }
+
+// 5. How to draw cross (X) in console
+// *   *
+//  * *
+//   *
+//  * *
+// *   * 
+
+let n=11
+for(let i=1; i<=n; i++){
+    for(let j=1; j<=n; j++){
+        if(i===j || i+j === n+1 ){
+            process.stdout.write("*")
+        }
+        else{
+            process.stdout.write(" ")
+        }
     }
-    if(array[i] === 0){
-     let temp = array[i];
-     array[i] = array[j];
-     array[j]= temp;
-     j++;
-     i++;
-    }
+    console.log(" ");
 }
-console.log(array);
 
+// 6. How to draw V shape in console
+// *   *
+//  * *
+//   * 
+// let n=15;
+// let m=2*n+1;
+
+// for(let i=1; i<=n; i++){
+//     for(let j=1; j<=m; j++){
+//         if(i+j===2*n || i===j){
+//             process.stdout.write("*")
+//         }
+//         else{
+//             process.stdout.write(" ")
+//         }
+//     }
+//     console.log(" ");   
+// }
