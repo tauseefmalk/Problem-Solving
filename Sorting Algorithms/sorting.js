@@ -157,37 +157,100 @@
 
 // 7. Quick sort
 
-let array= [5,4,3,2,1,0];
+// let array= [5,4,3,2,1,0];
 
-// for putting the pivot to the exact position and getting the pivot index
-function pivotIndex (arr, first, last ){
-  let pivot= array[first]
-  let i= first+1;
-  let j= last
-  while(i<=j){
-    while(i<=last && arr[i]<pivot) i++
-    while(j>=first && arr[j]>pivot) j--
-    if(i<j){
-      swap(arr, i,j)
-    }
-  }
-  swap(arr,j,first)
-  return j;
-}
+// // for putting the pivot to the exact position and getting the pivot index
+// function pivotIndex (arr, first, last ){
+//   let pivot= array[first]
+//   let i= first+1;
+//   let j= last
+//   while(i<=j){
+//     while(i<=last && arr[i]<pivot) i++
+//     while(j>=first && arr[j]>pivot) j--
+//     if(i<j){
+//       swap(arr, i,j)
+//     }
+//   }
+//   swap(arr,j,first)
+//   return j;
+// }
 
-function swap(arr, i, j){
-  let temp= arr[i]
-  arr[i] = arr[j]
-  arr[j] = temp
-}
+// function swap(arr, i, j){
+//   let temp= arr[i]
+//   arr[i] = arr[j]
+//   arr[j] = temp
+// }
 
-function quickSort (arr, first, last){
-  if(first>=last) return
-  let p= pivotIndex(arr,first,last)
-  quickSort(arr, first, p-1)
-    quickSort(arr, p+1, last)
-}
-quickSort(array,0,array.length-1)
-console.log(array);
+// function quickSort (arr, first, last){
+//   if(first>=last) return
+//   let p= pivotIndex(arr,first,last)
+//   quickSort(arr, first, p-1)
+//     quickSort(arr, p+1, last)
+// }
+// quickSort(array,0,array.length-1)
+// console.log(array);
+
+// let array=[5,3,1,2,4,10,20];
+
+// let srt=array.sort((a,b)=>a-b)
+// console.log(srt);
+// console.log(Date.now());
+
+
+// class BankAccount {
+//   #balance
+//   constructor(name, accountNumber, balance = 0) {
+//     this.name = name;
+//     this.accountNumber = Date.now();
+//     this.#balance = balance;
+//   }
+//   withdraw(value) {
+//     if (this.#balance < value) {
+//       console.log("not enough balance to withdraw", value);
+//     } else {
+//       this.#balance = this.#balance - value;
+//       console.log(value, "withdraw successfully");
+//     }
+//   }
+//   deposite(value) {
+//     if (value < 0) {
+//       console.log("value can't be less than zero");
+//     } else {
+//       this.#balance = this.#balance + value;
+//     }
+//   }
+//   takingLoan(value) {
+//     console.log(`taking loan of ${value}`);
+//   }
+//   get balance(){
+//    return this.#balance
+// }
+// }
+// class CurrentAccount extends BankAccount {
+//   takingLoan(value) {
+//     console.log("loan successflly taken");
+//     // this.balance = this.balance + value;
+//     this.deposite(value)
+//   }
+// }
+// class SavingAccount extends BankAccount {
+//   takingLoan(value) {
+//     console.log("loan successflly taken half");
+//     // this.balance = (this.balance + (value/2));
+//     this.deposite(value/2)
+//   }
+// }
+
+// const touseefAccount= new CurrentAccount("touseef")
+// // touseefAccount.takingLoan(100000)
+// // touseefAccount.getBalance()
+
+// // console.log(touseefAccount);
+// const usamaAccount= new SavingAccount("Usama")
+// // usamaAccount.takingLoan(10000)
+// usamaAccount.deposite(10000)
+// usamaAccount.takingLoan(500)
+// console.log(usamaAccount.balance)
+// // console.log(usamaAccount)
 
 
