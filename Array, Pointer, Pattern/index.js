@@ -397,18 +397,18 @@
 //  * *
 // *   * 
 
-let n=11
-for(let i=1; i<=n; i++){
-    for(let j=1; j<=n; j++){
-        if(i===j || i+j === n+1 ){
-            process.stdout.write("*")
-        }
-        else{
-            process.stdout.write(" ")
-        }
-    }
-    console.log(" ");
-}
+// let n=11
+// for(let i=1; i<=n; i++){
+//     for(let j=1; j<=n; j++){
+//         if(i===j || i+j === n+1 ){
+//             process.stdout.write("*")
+//         }
+//         else{
+//             process.stdout.write(" ")
+//         }
+//     }
+//     console.log(" ");
+// }
 
 // 6. How to draw V shape in console
 // *   *
@@ -428,3 +428,24 @@ for(let i=1; i<=n; i++){
 //     }
 //     console.log(" ");   
 // }
+
+// Q (two sum in an array)
+
+// function two_sum (array, target){
+// 	let pointer_1=0;
+// 	let pointer_2 = array.length-1;
+//     let sum =0
+// while(pointer_1<pointer_2){
+// sum = array[pointer_1] + array[pointer_2]
+// if(sum== target){
+// return true;
+// }
+// else if(sum<target){
+// pointer_1 +=1
+// }
+// else pointer_2 -=1
+// }
+// return false
+// }
+
+// console.log(two_sum([2,7,11,54],8))

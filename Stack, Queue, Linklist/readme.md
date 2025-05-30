@@ -12,3 +12,6 @@
 2. Queue implementation
 - enqueue
 - dequeue
+
+--------------**LinkList**----------------
+1. linklist emplementation
