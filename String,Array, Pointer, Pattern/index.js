@@ -278,7 +278,7 @@
 //     // console.log(str[0]);
 //     const upc = str[0].toUpperCase()
 //     return upc+str.slice(1);
-    
+
 // }
 // console.log(uppercase("name"));
 
@@ -291,7 +291,7 @@
 //     console.log(array);
 //     const upc = array.map((word)=>word[0].toUpperCase()+word.slice(1))
 //     return upc.join(" ");
-    
+
 // }
 // console.log(toUpperCase("hey osama, my name is touseef."))
 
@@ -382,7 +382,7 @@
 // for(let i=0; i<n; i++){
 //     for(let j=0; j<n-i; j++){
 //         process.stdout.write(" ")
-        
+
 //     }
 //     for(let k=0; k<=i; k++){
 //         process.stdout.write("*")
@@ -449,3 +449,62 @@
 // }
 
 // console.log(two_sum([2,7,11,54],8))
+
+// 21. write a function to return the sum of all number from 1 to N
+
+// function sum(num){
+//     let temp=0;
+//     for(let i=0; i<=num; i++){
+//         temp=temp+i;
+//     }
+//     return temp;
+// }
+
+// console.log(sum(5))
+
+// 22. reverse a string without using build in method and without using extra variable 
+
+// function reverse(str){
+//     let result="";
+//     for(let i= str.length-1; i>=0; i--){
+//         result= result+str[i]
+//     }
+//     return result
+// }
+// console.log(reverse("hello"));
+
+// check Armstrong number or not 
+
+// function isArmstrong(num){
+//     let original= num;
+//     let sum=0;
+//     let temp=num;
+//     while(temp>0){
+//         let reminder = temp % 10;
+//         sum += reminder ** 3;
+//         temp= Math.floor(temp/10)
+//     }
+//     return sum == original;
+// }
+
+// console.log(isArmstrong(153));
+
+// 23. Anagrams (earth,heart) same spelling
+
+// function isAnagrams(str1, str2) {
+//     if (str1.length !== str2.length) { return false }
+//     let obj = {};
+//     for (let char of str1) {
+//         obj[char] = (obj[char] || 0) + 1 // agr valure obj me hai to 1 daldo agr nai hai to 0
+//     }
+//     for (let char of str2) {
+//         if (obj[char]) {
+//             obj[char]--;
+//         }
+//         else {
+//             return false
+//         }
+//     }
+//     return true
+// }
+// console.log(isAnagrams("abbb", "abba"))

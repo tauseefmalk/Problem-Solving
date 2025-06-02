@@ -18,6 +18,9 @@
 18. How to convert Celsius into Fahrenheit and Fahrenheit into Celsius
 19. How to convert kilometers into miles
 20. Program to make the first letter of a string uppercase
+21. write a function to return the sum of all number from 1 to N
+22. reverse a string without using build in method and without using extra variable 
+23. Anagrams (earth,heart) same spelling
 
 ---------------**Two Pointer Method**------------
 

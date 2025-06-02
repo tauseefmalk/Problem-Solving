@@ -144,7 +144,24 @@ class LinkList {
         }
         result+= "null"
         console.log(result);
-        
+    }
+    // find middle node of singly list in just one path (one loop)
+    middleNode(){
+        let slow= this.head;
+        let fast= this.head;
+        while(fast.next && fast){   // fast khud or fast ka agla nuill to nai hai 
+            slow= slow.next
+            fast= fast.next.next
+        }
+        return slow;
+    }
+    // find the third node from the end 
+    thirdLast(){
+        let current= this.head;
+        while(current.next.next.next){
+            current= current.next;
+        }
+        return current;
     }
 }
 let linkList = new LinkList()
@@ -153,10 +170,13 @@ linkList.addToLast(2)
 linkList.addToLast(3)
 linkList.addToLast(4)
 linkList.addAt(2,7)
-linkList.removeAt(2)
-linkList.removeFirst()
-linkList.removeLast()
+// linkList.removeAt(2)
+// linkList.removeFirst()
+// linkList.removeLast()
+linkList.middleNode()
+linkList.thirdLast()
 
 
-console.log(linkList.print());
+console.log(linkList.thirdLast());
+
 
