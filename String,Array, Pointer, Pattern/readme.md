@@ -20,7 +20,12 @@
 20. Program to make the first letter of a string uppercase
 21. write a function to return the sum of all number from 1 to N
 22. reverse a string without using build in method and without using extra variable 
-23. Anagrams (earth,heart) same spelling
+23. check Armstrong number or not 
+24. Anagrams (earth,heart) same spellin
+25. sort charcter in descending or by frequency or countonh of each character 
+26. write a function to retuern a longest suffix among all strings in an array
+27. function to reverse the every third letter of the sentence
+28. write a function to delete all vowel letter from a string 
 
 ---------------**Two Pointer Method**------------
 

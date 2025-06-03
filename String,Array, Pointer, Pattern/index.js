@@ -473,23 +473,23 @@
 // }
 // console.log(reverse("hello"));
 
-// check Armstrong number or not 
+//23. check Armstrong number or not 
 
 // function isArmstrong(num){
 //     let original= num;
 //     let sum=0;
 //     let temp=num;
 //     while(temp>0){
-//         let reminder = temp % 10;
-//         sum += reminder ** 3;
-//         temp= Math.floor(temp/10)
+//         let reminder = temp % 10;    // getting the last value 
+//         sum += reminder ** 3;        // taking the cube and add to the sum
+//         temp= Math.floor(temp/10)    // last se aik value km kr raha hai
 //     }
 //     return sum == original;
 // }
 
 // console.log(isArmstrong(153));
 
-// 23. Anagrams (earth,heart) same spelling
+// 24. Anagrams (earth,heart) same spelling
 
 // function isAnagrams(str1, str2) {
 //     if (str1.length !== str2.length) { return false }
@@ -508,3 +508,77 @@
 //     return true
 // }
 // console.log(isAnagrams("abbb", "abba"))
+
+// 25. sort charcter in descending or by frequency or count of each character 
+
+// function sortFrequency(str) {
+//     let obj = {};
+//     for (let char of str) {
+//         obj[char] = (obj[char] || 0) + 1;
+//     }
+//     // console.log(obj);
+//     const sortedEntries = Object.entries(obj).sort((a, b) => b[1] - a[1]); // objpr direct sort nai lagta
+    
+//     // let result=sortedEntries.map(([char, count])=> char.repeat(count)).join("")
+//     // console.log(result);
+//     // return 1;
+
+//     // method 2
+
+//     let result = '';
+//     for(let [char, count] of sortedEntries ){
+//         for(let i=0; i<count; i++){
+//             result +=char
+//         }
+//     }
+//     return result
+
+// }
+// console.log(sortFrequency("aabbbbc"))
+
+// 26. write a function to return a longest suffix among all strings in an array
+
+// let arr= ;
+
+// function isSuffix(arr){
+//     // reverse the first element
+//     let suffix= arr[0].split("").reverse().join("");
+//     for(let i=1; i<arr.length; i++){
+//         let current= arr[i].split("").reverse().join("")
+//         let j=0
+//         while(j<current.length && j<suffix.length && suffix[j]=== current[j]){
+//             j++;
+//         }
+//         // now we have to seperate the matched part
+//         suffix= suffix.substring(0,j) // substring jo hai wo specific ko alag kr deti hai 
+//         if(suffix ==="") return ""
+//     }
+//     return suffix.split("").reverse().join("")
+// }
+// // console.log(isSuffix(["introduction", "reduction", "production"]))
+// console.log(isSuffix(["singing", "ringing", "bringing"]))
+
+// 27. function to reverse the every third letter of the sentence
+
+// function reverseThirdLetter(str){
+//     let temp=str.split(" ") // strng ko array bna diya
+//     for(let i=2; i<temp.length; i+=3){
+//         temp[i] = temp[i].split("").reverse().join("")
+//     }
+//     return temp.join(" ") // dobara string bna diya hai
+// }
+// console.log(reverseThirdLetter("one two three four five six seven"))
+
+// 28. write a function to delete all vowel letter from a string 
+
+function deleteVowelLetters(str){
+    let vowel = "aAeEiIoOuU";
+    let result = "";
+    for(let char of str){
+        if(!vowel.includes(char)){
+            result +=char;
+        }
+    }
+    return result;
+}
+console.log(deleteVowelLetters("beautifull day"));

@@ -82,101 +82,113 @@ class LinkList {
             this.head = newNode
         }
     }
-    addToLast(value){
-        let newNode= new Node(value)
-        if(this.head){
+    addToLast(value) {
+        let newNode = new Node(value)
+        if (this.head) {
             let current = this.head
-            while(current.next !== null){
-                current= current.next
+            while (current.next !== null) {
+                current = current.next
             }
-            current.next= newNode
-        }else{
+            current.next = newNode
+        } else {
             this.head = value
         }
     }
-    size(){
-        let count=0
+    size() {
+        let count = 0
         let current = this.head;
-        while(current){
-            current=current.next
+        while (current) {
+            current = current.next
             count++
         }
         return count
     }
-    addAt(index,value){
-        if(index>this.size() || index<0){
+    addAt(index, value) {
+        if (index > this.size() || index < 0) {
             console.log("invalid index");
         }
         let current = this.head;
-        for(let i=0; i<index-1; i++){
-            current= current.next 
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next
         }
         let newNode = new Node(value)
-        newNode.next =current.next;
+        newNode.next = current.next;
         current.next = newNode;
     }
-    removeAt(index){
-        if(index>this.size() || index<0){
+    removeAt(index) {
+        if (index > this.size() || index < 0) {
             console.error("invalid index");
         }
-        let current= this.head
-        for(let i=0; i<index-1; i++){
-            current= current.next
+        let current = this.head
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next
         }
         current.next = current.next.next
     }
-    removeFirst(){
-        this.head= this.head.next
+    removeFirst() {
+        this.head = this.head.next
     }
-    removeLast(){
+    removeLast() {
         let current = this.head;
-        while(current.next.next){
-            current= current.next
+        while (current.next.next) {
+            current = current.next
         }
         current.next = null
     }
-    print(){
+    print() {
         let current = this.head
         let result = ""
-        while(current){
+        while (current) {
             result += current.data + "=>"
-            current= current.next
+            current = current.next
         }
-        result+= "null"
+        result += "null"
         console.log(result);
     }
     // find middle node of singly list in just one path (one loop)
-    middleNode(){
-        let slow= this.head;
-        let fast= this.head;
-        while(fast.next && fast){   // fast khud or fast ka agla nuill to nai hai 
-            slow= slow.next
-            fast= fast.next.next
+    middleNode() {
+        let slow = this.head;
+        let fast = this.head;
+        while (fast.next && fast) {   // fast khud or fast ka agla nuill to nai hai 
+            slow = slow.next
+            fast = fast.next.next
         }
         return slow;
     }
     // find the third node from the end 
-    thirdLast(){
-        let current= this.head;
-        while(current.next.next.next){
-            current= current.next;
+    thirdLast() {
+        let current = this.head;
+        while (current.next.next.next) {
+            current = current.next;
         }
         return current;
+    }
+    findFirstRepeating() {
+        let set = new Set()
+        let current = this.head
+        while (current) {
+            if (set.has(current.data)) {return current.data}
+            set.add(current.data)
+            current = current.next
+        }
+        return null;
     }
 }
 let linkList = new LinkList()
 linkList.addToFirst(1)
 linkList.addToLast(2)
+linkList.addToLast(2)
 linkList.addToLast(3)
 linkList.addToLast(4)
-linkList.addAt(2,7)
+linkList.addAt(2, 7)
 // linkList.removeAt(2)
 // linkList.removeFirst()
 // linkList.removeLast()
-linkList.middleNode()
-linkList.thirdLast()
+// linkList.middleNode()
+// linkList.thirdLast()
 
 
-console.log(linkList.thirdLast());
+
+console.log(linkList.findFirstRepeating());
 
 
