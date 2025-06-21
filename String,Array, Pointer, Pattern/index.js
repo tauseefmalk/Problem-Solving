@@ -512,16 +512,16 @@
 // 25. sort charcter in descending or by frequency or count of each character 
 
 // function sortFrequency(str) {
-//     let obj = {};
-//     for (let char of str) {
-//         obj[char] = (obj[char] || 0) + 1;
-//     }
-//     // console.log(obj);
-//     const sortedEntries = Object.entries(obj).sort((a, b) => b[1] - a[1]); // objpr direct sort nai lagta
+    // let obj = {};
+    // for (let char of str) {
+    //     obj[char] = (obj[char] || 0) + 1;
+    // }
+    // // console.log(obj);
+    // const sortedEntries = Object.entries(obj).sort((a, b) => b[1] - a[1]); // obj pr direct sort nai lagta
     
-//     // let result=sortedEntries.map(([char, count])=> char.repeat(count)).join("")
-//     // console.log(result);
-//     // return 1;
+    // let result=sortedEntries.map(([char, count])=> char.repeat(count)).join("")
+   // console.log(result);
+ // return 1;
 
 //     // method 2
 
@@ -538,7 +538,7 @@
 
 // 26. write a function to return a longest suffix among all strings in an array
 
-// let arr= ;
+
 
 // function isSuffix(arr){
 //     // reverse the first element
@@ -571,14 +571,14 @@
 
 // 28. write a function to delete all vowel letter from a string 
 
-function deleteVowelLetters(str){
-    let vowel = "aAeEiIoOuU";
-    let result = "";
-    for(let char of str){
-        if(!vowel.includes(char)){
-            result +=char;
-        }
-    }
-    return result;
-}
-console.log(deleteVowelLetters("beautifull day"));
+// function deleteVowelLetters(str){
+//     let vowel = "aAeEiIoOuU";
+//     let result = "";
+//     for(let char of str){
+//         if(!vowel.includes(char)){
+//             result +=char;
+//         }
+//     }
+//     return result;
+// }
+// console.log(deleteVowelLetters("beautifull day"));
